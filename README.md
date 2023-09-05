@@ -9,12 +9,8 @@ Domain: e-junkie.com/wiki/demo/
 ##Team
 
 - Alpaslan Alemdar - QA Lead
-- Ahmet Hakan - Tester
-- Aygül Abilova - Tester
-- Neslihan Terlemez - Tester
-- Nergis Reçel - Tester
-- Omer Al- Tester
 - Sokol Rrustemi- Tester
+- Omer Al- Tester
 
 Getting Started
 ---------------
