@@ -45,7 +45,7 @@ public class BaseDriver {
     @AfterClass
     public void endp(){ // tearDown
         MyFunc.Bekle(3);
-        driver.quit();
+      //  driver.quit();
     }
 
 }
