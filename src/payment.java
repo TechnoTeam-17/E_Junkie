@@ -66,8 +66,6 @@ public class payment extends BaseDriver {
       MyFunc.Bekle(2);
       WebElement shadowWebParent = driver.findElement(By.name("close-circle"));
       MyFunc.Bekle(2);
-   //   WebElement elem = new WebDriverWait(driver, 1).
-    //          until(ExpectedConditions.visibilityOfElementLocated(By.xpath(HAMBURGER_MENU_GENERAL_XPATH)));
 
       WebElement cong = driver.findElement(By.xpath("//span[contains(text(),'your order is confirmed. Thank you!')]"));
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'your order is confirmed. Thank you!')]")));
