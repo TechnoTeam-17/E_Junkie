@@ -1,11 +1,12 @@
 import Utility.BaseDriver;
 import Utility.MyFunc;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.function.Function;
 
 public class payment extends BaseDriver {
     @Test
@@ -62,11 +63,15 @@ public class payment extends BaseDriver {
       cvv.sendKeys("000");
       WebElement payd= driver.findElement(By.xpath(" //*[@class='Pay-Button']"));
       payd.click();
-      MyFunc.Bekle(1);
+      MyFunc.Bekle(2);
       WebElement shadowWebParent = driver.findElement(By.name("close-circle"));
-      MyFunc.Bekle(1);
+      MyFunc.Bekle(2);
+   //   WebElement elem = new WebDriverWait(driver, 1).
+    //          until(ExpectedConditions.visibilityOfElementLocated(By.xpath(HAMBURGER_MENU_GENERAL_XPATH)));
 
       WebElement cong = driver.findElement(By.xpath("//span[contains(text(),'your order is confirmed. Thank you!')]"));
+      wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'your order is confirmed. Thank you!')]")));
       Assert.assertTrue(cong.isDisplayed());
+
     }
 }
